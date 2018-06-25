@@ -4,12 +4,14 @@
 //   return ''
 // }
 
-const shortestString = arr => {
-  return arr.reduce((shortest, str) => {
+const shortestString = function(arr) {
+  let shortest = arr[0]
+  arr.forEach(str => {
     if (str.length < shortest.length) {
       shortest = str
     }
-  }, arr[0])
+  })
+  return shortest
 }
 
 module.exports = {
